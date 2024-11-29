@@ -1,1 +1,1 @@
-# fMRI_scan_clustering
+# fMRI_scan_classification
