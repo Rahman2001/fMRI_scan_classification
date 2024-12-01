@@ -86,12 +86,13 @@ class rest_1200_3D(BaseDataset):
                 age = torch.tensor(
                     self.meta_data_residual[self.meta_data_residual['subject'] == int(subject)]['age'].values[0])
             except Exception:
-                #deal with discrepency that a few subjects don't have exact age, so we take the mean of the age range as the exact age proxy
+                # deal with discrepancy that a few subjects don't have exact age, so we take the mean of the age
+                # range as the exact age proxy
                 age = self.meta_data[self.meta_data['Subject'] == int(subject)]['Age'].values[0]
                 age = torch.tensor([float(x) for x in age.replace('+', '-').split('-')]).mean()
             gender = self.meta_data[self.meta_data['Subject'] == int(subject)]['Gender'].values[0]
             path_to_TRs = os.path.join(self.data_dir, subject, self.norm)
-            subject_duration = len(os.listdir(path_to_TRs))  #121
+            subject_duration = len(os.listdir(path_to_TRs))  # 121
             session_duration = subject_duration - self.sample_duration
             filename = os.listdir(path_to_TRs)[0]
             filename = filename[:filename.find('TR') + 3]
