@@ -15,10 +15,10 @@ class DataHandler():
         self.current_split = self.splits_folder.joinpath('seed_{}.txt'.format(self.seed))
 
     def get_dataset(self):
-        if self.dataset_name == 'BNU_EOEC1':
-            return rest_1200_3D
-        elif self.dataset_name == 'ucla':
-            return ucla
+        if self.dataset_name == 'BNU_EOEC1':  # Beijing Normal University Eye Open and Eye Closed (part 1) dataset
+            return BNU_EOEC1
+        # elif self.dataset_name == 'ucla':
+        #     return ucla
         else:
             raise NotImplementedError
 

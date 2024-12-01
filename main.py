@@ -13,7 +13,7 @@ def get_arguments(base_path):
     parser = argparse.ArgumentParser()
     parser.add_argument('--base_path', default=base_path)
     parser.add_argument('--seed', type=int, default=55555555)
-    parser.add_argument('--dataset_name', type=str, default="ucla")
+    parser.add_argument('--dataset_name', type=str, default="BNU_EOEC1")
     parser.add_argument('--cuda', default=True)
     parser.add_argument('--log_dir', type=str, default=os.path.join(base_path, 'runs'))
     parser.add_argument('--random_TR', default=True)
@@ -26,8 +26,8 @@ def get_arguments(base_path):
                         choices=['regression', 'binary_classification'],
                         help='fine tune model objective. choose binary_classification in case of a binary '
                              'classification task')
-    parser.add_argument('--train_split', default=0.7)
-    parser.add_argument('--val_split', default=0.15)
+    parser.add_argument('--train_split', default=0.8)
+    # parser.add_argument('--val_split', default=0.15)
     parser.add_argument('--running_mean_size', default=5000)
 
     # phase 1
@@ -41,7 +41,7 @@ def get_arguments(base_path):
     parser.add_argument('--lr_gamma_phase1', default=0.97)
     parser.add_argument('--lr_step_phase1', default=500)
     parser.add_argument('--sequence_length_phase1', default=1)
-    parser.add_argument('--workers_phase1', default=4)
+    parser.add_argument('--workers_phase1', default=1)
 
     # phase 2
     parser.add_argument('--task_phase2', type=str, default='transformer_reconstruction')
