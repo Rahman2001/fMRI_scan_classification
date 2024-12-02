@@ -26,8 +26,8 @@ def get_arguments(base_path):
                         choices=['regression', 'binary_classification'],
                         help='fine tune model objective. choose binary_classification in case of a binary '
                              'classification task')
-    parser.add_argument('--train_split', default=0.8)
-    # parser.add_argument('--val_split', default=0.15)
+    parser.add_argument('--train_split', default=0.7)
+    parser.add_argument('--val_split', default=0.15)
     parser.add_argument('--running_mean_size', default=5000)
 
     # phase 1
