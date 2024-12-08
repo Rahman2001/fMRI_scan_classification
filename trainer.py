@@ -17,7 +17,7 @@ class Trainer():
     def __init__(self, sets, **kwargs):
         self.register_args(**kwargs)
         self.lr_handler = LrHandler(**kwargs)
-        self.train_loader, self.val_loader, _ = DataHandler(**kwargs).create_dataloaders()
+        self.train_loader, self.val_loader, self.test_loader = DataHandler(**kwargs).create_dataloaders()
         self.create_model()
         self.initialize_weights(load_cls_embedding=False)
         self.create_optimizer()
@@ -75,8 +75,11 @@ class Trainer():
         for metric_name in dir(self.writer):
             if 'history' not in metric_name:
                 continue
-            metric_score = getattr(self.writer, metric_name)[-1]
-            print('final test score - {} = {}'.format(metric_name, metric_score))
+            metric_score = getattr(self.writer, metric_name)
+            if 'save_history_to_csv' in metric_name:
+                metric_score()
+            else:
+                print('final test score - {} = {}'.format(metric_name, metric_score[-1]))
 
     def training(self):
         for epoch in range(self.nEpochs):

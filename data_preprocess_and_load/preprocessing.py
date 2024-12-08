@@ -30,7 +30,7 @@ def read_bnu(file_path, global_norm_path, per_voxel_norm_path, hand, count, queu
 
 
 def main():
-    bnu_path = r'/mnt/c/Users/Rahma/Desktop/Data_Mining_2/project/datasets/Beijing_Normal_University_EOEC1'
+    bnu_path = r'C:\Users\Rahma\Desktop\Data_Mining_2\project\datasets\Beijing_Normal_University_EOEC1'
     # all_files_path = os.path.join(bnu_path, 'extract_bnu_data')
     queue = Queue()
     count = 0

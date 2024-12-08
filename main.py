@@ -95,7 +95,7 @@ def run_phase(args, loaded_model_weights_path, phase_num, phase_name):
     fine_tune_task = args.fine_tune_task
     args_logger(args)
     args = sort_args(phase_num, vars(args))
-    S = ['train']  # corrected from [train, val] to [train]
+    S = ['train', 'val']
     trainer = Trainer(sets=S, **args)
     trainer.training()
     if phase_num == '3' and not fine_tune_task == 'regression':
@@ -109,29 +109,40 @@ def run_phase(args, loaded_model_weights_path, phase_num, phase_name):
 
 def test(args, model_weights_path):
     experiment_folder = '{}_{}_{}'.format(args.dataset_name, 'test_{}'.format(args.fine_tune_task), datestamp())
-    experiment_folder = os.path.join(args.base_path, 'tests', experiment_folder)
+    experiment_folder = Path(os.path.join(args.base_path, 'tests', experiment_folder))
     os.makedirs(experiment_folder)
-    trainer = Trainer(experiment_folder, '3', args, ['test'], model_weights_path)
+    setattr(args, 'loaded_model_weights_path_phase' + '3', model_weights_path)
+    args.experiment_folder = experiment_folder
+    args.experiment_title = experiment_folder.name
+    args_logger(args)
+    args = sort_args('3', vars(args))
+    trainer = Trainer(['test'], **args)
     trainer.testing()
 
 
 def main(base_path):
     args = get_arguments(base_path)
     # pretrain step1
-    print('starting phase 1...')
-    model_weights_path_phase1 = run_phase(args, None, '1', 'autoencoder_reconstruction')
-    print('finishing phase 1...')
-    # pretrain step2
-    print('starting phase 2...')
-    model_weights_path_phase2 = run_phase(args, model_weights_path_phase1, '2', 'tranformer_reconstruction')
-    print('finishing phase 2...')
-    # fine tune
-    print('starting phase 3...')
-    model_weights_path_phase3 = run_phase(args, model_weights_path_phase2, '3',
-                                          'fine_tune_{}'.format(args.fine_tune_task))
+    # print('starting phase 1...')
+    # model_weights_path_phase1 = run_phase(args, None, '1', 'autoencoder_reconstruction')
+    # print('finishing phase 1...')
+    # # pretrain step2
+    # print('starting phase 2...')
+    # model_weights_path_phase2 = run_phase(args, model_weights_path_phase1, '2', 'tranformer_reconstruction')
+    # print('finishing phase 2...')
+    # # fine tune
+    # print('starting phase 3...')
+    # model_weights_path_phase3 = run_phase(args,
+    #                                       r'C:\Users\Rahma\IdeaProjects\TFF\experiments'
+    #                                       r'\BNU_EOEC1_tranformer_reconstruction_03_12___13_44_35'
+    #                                       r'\BNU_EOEC1_tranformer_reconstruction_03_12___13_44_35_BEST_val_loss.pth',
+    #                                       '3',
+    #                                       'fine_tune_{}'.format(args.fine_tune_task))
     print('finishing phase 3...')
     # test
-    test(args, model_weights_path_phase3)
+    test(args, r'C:\Users\Rahma\IdeaProjects\TFF'
+               r'\experiments\BNU_EOEC1_fine_tune_binary_classification_07_12___04_27_48'
+               r'\BNU_EOEC1_fine_tune_binary_classification_07_12___04_27_48_BEST_val_accuracy.pth')
 
 
 if __name__ == '__main__':

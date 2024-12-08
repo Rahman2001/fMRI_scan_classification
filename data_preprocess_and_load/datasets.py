@@ -38,14 +38,14 @@ class BaseDataset(Dataset):
     def TR_string(self, filename_TR, x):
         # all datasets should have the TR mentioned in the format of 'some prefix _ number.pt'
         TR_num = [xx for xx in filename_TR.split('_') if xx.isdigit()][0]
-        assert len(filename_TR.split('_')) == 2
+        assert len(filename_TR.split('_')) == 4
         filename = filename_TR.replace(TR_num, str(int(TR_num) + x)) + '.pt'
         return filename
 
     def determine_TR(self, TRs_path, TR):
         if self.random_TR:
             possible_TRs = len(os.listdir(TRs_path)) - self.sample_duration
-            TR = 'TR_' + str(torch.randint(0, possible_TRs, (1,)).item())
+            TR = 'rfMRI_r_TR_' + str(torch.randint(0, possible_TRs, (1,)).item())
         return TR
 
     def load_sequence(self, TRs_path, TR):
@@ -69,12 +69,13 @@ class BaseDataset(Dataset):
 class BNU_EOEC1(BaseDataset):
     def __init__(self, **kwargs):
         self.register_args(**kwargs)
-        self.root = r'C:\Users\Rahma\Desktop\Data_Mining_2\Beijing_Normal_University_EOEC1'
+        self.root = r'C:\Users\Rahma\Desktop\Data_Mining_2\project\datasets\Beijing_Normal_University_EOEC1'
         self.meta_data = pd.read_csv(os.path.join(kwargs.get('base_path'), 'data', 'metadata', 'BNU_EOEC1.csv'))
         # self.meta_data_residual = pd.read_csv(
         #     os.path.join(kwargs.get('base_path'), 'data', 'metadata', 'HCP_1200_precise_age.csv'))
         self.data_dir = os.path.join(self.root, 'MNI_to_TRs')
         self.subject_names = os.listdir(self.data_dir)
+        print(f'subject_names={self.subject_names}')
         self.label_dict = {'open': torch.tensor([0.0]), 'closed': torch.tensor([1.0]),
                            '22-25': torch.tensor([1.0, 0.0]),
                            '26-30': torch.tensor([1.0, 0.0]),
@@ -108,7 +109,7 @@ class BNU_EOEC1(BaseDataset):
         if self.augment is not None:
             y = self.augment(y)
         return {'fmri_sequence': y, 'subject': subj, 'subject_binary_classification': self.label_dict[eoec],
-                'subject_regression': age, 'TR': int(TR.split('_')[1])}
+                'subject_regression': age, 'TR': int(TR.split('_')[-1])}
 
 #
 # class ucla(BaseDataset):

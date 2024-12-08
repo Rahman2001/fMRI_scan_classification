@@ -5,7 +5,7 @@ from utils import reproducibility
 
 
 class DataHandler():
-    def __init__(self, test=False, **kwargs):
+    def __init__(self, test=True, **kwargs):
         self.test = test
         self.kwargs = kwargs
         self.dataset_name = kwargs.get('dataset_name')
@@ -36,7 +36,6 @@ class DataHandler():
                                                                                  self.subject_list)
         else:
             train_idx, val_idx, test_idx = self.determine_split_randomly(self.subject_list, **self.kwargs)
-
 
         train_loader = Subset(train_loader, train_idx)
         val_loader = Subset(eval_loader, val_idx)

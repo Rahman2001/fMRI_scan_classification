@@ -12,7 +12,10 @@ def get_intense_voxels(yy,shape):
             background = yy[0, 0, 0]
             yy[yy <= background] = 0
             yy = abs(yy)
-            voxels[batch, :, :, :, :, TR] = (yy > torch.quantile(yy[yy > 0], low_quantile)).unsqueeze(0)
+            try:
+                voxels[batch, :, :, :, :, TR] = (yy > torch.quantile(yy[yy > 0], low_quantile)).unsqueeze(0)
+            except Exception:
+                pass
     return voxels.view(shape)>0
 
 class Vgg16(nn.Module):
