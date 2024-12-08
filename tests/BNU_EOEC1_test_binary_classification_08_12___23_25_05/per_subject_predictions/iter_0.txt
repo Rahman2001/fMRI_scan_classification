@@ -1,0 +1,46 @@
+subject:97 (test)
+outputs: 0.9998±0.0000  -  truth: 1.0
+subject:3 (test)
+outputs: 0.9997±0.0000  -  truth: 1.0
+subject:84 (test)
+outputs: 0.9998±0.0000  -  truth: 1.0
+subject:34 (test)
+outputs: 0.9981±0.0005  -  truth: 1.0
+subject:116 (test)
+outputs: 0.9968±0.0005  -  truth: 1.0
+subject:125 (test)
+outputs: 0.9999±0.0000  -  truth: 1.0
+subject:27 (test)
+outputs: 0.9999±0.0000  -  truth: 1.0
+subject:4 (test)
+outputs: 0.9997±0.0000  -  truth: 0.0
+subject:8 (test)
+outputs: 0.9997±0.0000  -  truth: 0.0
+subject:132 (test)
+outputs: 0.9988±0.0009  -  truth: 1.0
+subject:121 (test)
+outputs: 0.9472±0.0208  -  truth: 0.0
+subject:23 (test)
+outputs: 0.0002±0.0001  -  truth: 0.0
+subject:137 (test)
+outputs: 0.7030±0.0887  -  truth: 0.0
+subject:123 (test)
+outputs: 0.9999±0.0000  -  truth: 1.0
+subject:30 (test)
+outputs: 0.9999±0.0000  -  truth: 1.0
+subject:92 (test)
+outputs: 0.0001±0.0000  -  truth: 1.0
+subject:85 (test)
+outputs: 0.9993±0.0001  -  truth: 0.0
+subject:26 (test)
+outputs: 0.9994±0.0000  -  truth: 0.0
+subject:65 (test)
+outputs: 0.9996±0.0000  -  truth: 1.0
+subject:67 (test)
+outputs: 0.9999±0.0000  -  truth: 1.0
+subject:9 (test)
+outputs: 0.9997±0.0000  -  truth: 1.0
+subject:20 (test)
+outputs: 0.0001±0.0000  -  truth: 0.0
+subject:57 (test)
+outputs: 0.9998±0.0000  -  truth: 1.0

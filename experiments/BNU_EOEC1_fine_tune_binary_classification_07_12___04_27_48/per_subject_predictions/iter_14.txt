@@ -1,0 +1,242 @@
+subject:142 (train)
+outputs: 0.7246±0.1238  -  truth: 1.0
+subject:12 (train)
+outputs: 0.6730±0.1260  -  truth: 1.0
+subject:126 (train)
+outputs: 0.7214±0.0410  -  truth: 0.0
+subject:36 (train)
+outputs: 0.7101±0.0917  -  truth: 1.0
+subject:43 (train)
+outputs: 0.6595±0.1042  -  truth: 1.0
+subject:1 (train)
+outputs: 0.6156±0.1247  -  truth: 0.0
+subject:73 (train)
+outputs: 0.7518±0.0838  -  truth: 1.0
+subject:134 (train)
+outputs: 0.6800±0.1525  -  truth: 1.0
+subject:42 (train)
+outputs: 0.7166±0.0854  -  truth: 1.0
+subject:96 (train)
+outputs: 0.7229±0.0934  -  truth: 1.0
+subject:10 (train)
+outputs: 0.6681±0.0648  -  truth: 1.0
+subject:127 (train)
+outputs: 0.7281±0.0722  -  truth: 1.0
+subject:13 (train)
+outputs: 0.6783±0.1104  -  truth: 1.0
+subject:88 (train)
+outputs: 0.6497±0.1246  -  truth: 1.0
+subject:14 (train)
+outputs: 0.7580±0.1420  -  truth: 0.0
+subject:93 (train)
+outputs: 0.6850±0.1363  -  truth: 0.0
+subject:101 (train)
+outputs: 0.6959±0.1139  -  truth: 1.0
+subject:35 (train)
+outputs: 0.7405±0.1109  -  truth: 1.0
+subject:87 (train)
+outputs: 0.5773±0.1330  -  truth: 0.0
+subject:63 (train)
+outputs: 0.6510±0.1173  -  truth: 1.0
+subject:71 (train)
+outputs: 0.7286±0.0753  -  truth: 1.0
+subject:86 (train)
+outputs: 0.7379±0.1275  -  truth: 1.0
+subject:78 (train)
+outputs: 0.7131±0.1199  -  truth: 0.0
+subject:41 (train)
+outputs: 0.7409±0.0961  -  truth: 1.0
+subject:140 (train)
+outputs: 0.6592±0.0854  -  truth: 1.0
+subject:60 (train)
+outputs: 0.7128±0.0923  -  truth: 1.0
+subject:129 (train)
+outputs: 0.7867±0.0606  -  truth: 1.0
+subject:124 (train)
+outputs: 0.6521±0.1334  -  truth: 0.0
+subject:103 (train)
+outputs: 0.6810±0.1390  -  truth: 1.0
+subject:18 (train)
+outputs: 0.7041±0.0963  -  truth: 1.0
+subject:141 (train)
+outputs: 0.7470±0.1048  -  truth: 1.0
+subject:77 (train)
+outputs: 0.7313±0.0962  -  truth: 1.0
+subject:49 (train)
+outputs: 0.6897±0.1176  -  truth: 0.0
+subject:99 (train)
+outputs: 0.7707±0.0747  -  truth: 1.0
+subject:113 (train)
+outputs: 0.7837±0.0550  -  truth: 1.0
+subject:24 (train)
+outputs: 0.6909±0.1051  -  truth: 0.0
+subject:25 (train)
+outputs: 0.6919±0.2166  -  truth: 1.0
+subject:133 (train)
+outputs: 0.6690±0.1243  -  truth: 1.0
+subject:120 (train)
+outputs: 0.7379±0.1015  -  truth: 1.0
+subject:112 (train)
+outputs: 0.7050±0.1487  -  truth: 1.0
+subject:47 (train)
+outputs: 0.7100±0.1549  -  truth: 0.0
+subject:28 (train)
+outputs: 0.7253±0.1460  -  truth: 1.0
+subject:58 (train)
+outputs: 0.7627±0.1950  -  truth: 1.0
+subject:89 (train)
+outputs: 0.6934±0.1276  -  truth: 1.0
+subject:7 (train)
+outputs: 0.7813±0.0825  -  truth: 0.0
+subject:37 (train)
+outputs: 0.7764±0.1432  -  truth: 1.0
+subject:0 (train)
+outputs: 0.7047±0.1079  -  truth: 1.0
+subject:6 (train)
+outputs: 0.7560±0.1395  -  truth: 1.0
+subject:5 (train)
+outputs: 0.6928±0.1689  -  truth: 0.0
+subject:136 (train)
+outputs: 0.7200±0.1100  -  truth: 0.0
+subject:72 (train)
+outputs: 0.7506±0.0683  -  truth: 0.0
+subject:79 (train)
+outputs: 0.8160±0.0530  -  truth: 1.0
+subject:82 (train)
+outputs: 0.6617±0.0875  -  truth: 1.0
+subject:98 (train)
+outputs: 0.6551±0.1573  -  truth: 0.0
+subject:68 (train)
+outputs: 0.7122±0.1277  -  truth: 1.0
+subject:139 (train)
+outputs: 0.7189±0.1231  -  truth: 0.0
+subject:48 (train)
+outputs: 0.7506±0.0942  -  truth: 0.0
+subject:50 (train)
+outputs: 0.7488±0.0833  -  truth: 1.0
+subject:22 (train)
+outputs: 0.6753±0.1776  -  truth: 1.0
+subject:106 (train)
+outputs: 0.6878±0.1282  -  truth: 1.0
+subject:110 (train)
+outputs: 0.6745±0.1419  -  truth: 1.0
+subject:76 (train)
+outputs: 0.7036±0.1179  -  truth: 0.0
+subject:54 (train)
+outputs: 0.7342±0.1393  -  truth: 1.0
+subject:81 (train)
+outputs: 0.7050±0.1283  -  truth: 1.0
+subject:40 (train)
+outputs: 0.6494±0.1373  -  truth: 0.0
+subject:51 (train)
+outputs: 0.6840±0.0681  -  truth: 0.0
+subject:102 (train)
+outputs: 0.7161±0.0828  -  truth: 1.0
+subject:83 (train)
+outputs: 0.5995±0.0553  -  truth: 1.0
+subject:135 (train)
+outputs: 0.7210±0.0606  -  truth: 1.0
+subject:90 (train)
+outputs: 0.7175±0.0696  -  truth: 0.0
+subject:62 (train)
+outputs: 0.5819±0.0274  -  truth: 0.0
+subject:46 (train)
+outputs: 0.6672±0.1132  -  truth: 1.0
+subject:11 (train)
+outputs: 0.7188±0.0866  -  truth: 0.0
+subject:95 (train)
+outputs: 0.6012±0.1417  -  truth: 1.0
+subject:17 (train)
+outputs: 0.6594±0.1386  -  truth: 1.0
+subject:39 (train)
+outputs: 0.6732±0.1418  -  truth: 1.0
+subject:29 (train)
+outputs: 0.6965±0.1586  -  truth: 1.0
+subject:115 (train)
+outputs: 0.5932±0.0854  -  truth: 1.0
+subject:74 (train)
+outputs: 0.6245±0.1504  -  truth: 1.0
+subject:33 (train)
+outputs: 0.5562±0.1810  -  truth: 1.0
+subject:75 (train)
+outputs: 0.6301±0.1212  -  truth: 1.0
+subject:143 (train)
+outputs: 0.7273±0.0839  -  truth: 0.0
+subject:117 (train)
+outputs: 0.5349±0.2206  -  truth: 1.0
+subject:107 (train)
+outputs: 0.7208±0.1245  -  truth: 1.0
+subject:19 (train)
+outputs: 0.7140±0.1376  -  truth: 1.0
+subject:53 (train)
+outputs: 0.6550±0.1061  -  truth: 1.0
+subject:56 (train)
+outputs: 0.6560±0.1366  -  truth: 0.0
+subject:59 (train)
+outputs: 0.7008±0.0474  -  truth: 1.0
+subject:70 (train)
+outputs: 0.6618±0.1579  -  truth: 0.0
+subject:118 (train)
+outputs: 0.7636±0.0691  -  truth: 0.0
+subject:64 (train)
+outputs: 0.6645±0.1294  -  truth: 1.0
+subject:45 (train)
+outputs: 0.6920±0.1154  -  truth: 1.0
+subject:21 (train)
+outputs: 0.6735±0.0802  -  truth: 0.0
+subject:91 (train)
+outputs: 0.7874±0.0599  -  truth: 1.0
+subject:105 (train)
+outputs: 0.6244±0.1156  -  truth: 0.0
+subject:66 (train)
+outputs: 0.6347±0.0910  -  truth: 0.0
+subject:128 (train)
+outputs: 0.6892±0.0695  -  truth: 1.0
+subject:104 (train)
+outputs: 0.7128±0.0991  -  truth: 0.0
+subject:122 (train)
+outputs: 0.8174±0.0879  -  truth: 1.0
+subject:32 (train)
+outputs: 0.7065±0.0409  -  truth: 1.0
+subject:94 (val)
+outputs: 0.7149±0.0004  -  truth: 0.0
+subject:69 (val)
+outputs: 0.6955±0.0007  -  truth: 1.0
+subject:131 (val)
+outputs: 0.7366±0.0001  -  truth: 1.0
+subject:15 (val)
+outputs: 0.7117±0.0004  -  truth: 1.0
+subject:119 (val)
+outputs: 0.7339±0.0001  -  truth: 1.0
+subject:109 (val)
+outputs: 0.7177±0.0005  -  truth: 1.0
+subject:80 (val)
+outputs: 0.7316±0.0001  -  truth: 0.0
+subject:138 (val)
+outputs: 0.7271±0.0003  -  truth: 1.0
+subject:44 (val)
+outputs: 0.7335±0.0001  -  truth: 1.0
+subject:55 (val)
+outputs: 0.7231±0.0002  -  truth: 0.0
+subject:100 (val)
+outputs: 0.7271±0.0001  -  truth: 1.0
+subject:38 (val)
+outputs: 0.6974±0.0003  -  truth: 1.0
+subject:52 (val)
+outputs: 0.7335±0.0001  -  truth: 0.0
+subject:111 (val)
+outputs: 0.7321±0.0001  -  truth: 0.0
+subject:108 (val)
+outputs: 0.7351±0.0003  -  truth: 0.0
+subject:16 (val)
+outputs: 0.7328±0.0001  -  truth: 1.0
+subject:61 (val)
+outputs: 0.7318±0.0001  -  truth: 0.0
+subject:31 (val)
+outputs: 0.6919±0.0005  -  truth: 1.0
+subject:2 (val)
+outputs: 0.6928±0.0001  -  truth: 1.0
+subject:130 (val)
+outputs: 0.7369±0.0002  -  truth: 1.0
+subject:114 (val)
+outputs: 0.7367±0.0001  -  truth: 0.0

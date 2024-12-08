@@ -1,0 +1,2 @@
+binary_classification_test_loss_history,total_test_loss_history,test_Balanced_Accuracy,test_Regular_Accuracy,test_AUROC
+1.8886816926247516,1.8886816926247516,0.5916666666666667,0.6956521739130435,0.8083333333333333
