@@ -1,5 +1,4 @@
 # Pre-training and Fine-tuning Transformers for fMRI Prediction Tasks
-This repo is the implementation for [**TFF**](https://arxiv.org/abs/2112.05761v1). 
 
 
 <p align="center">
@@ -8,43 +7,37 @@ This repo is the implementation for [**TFF**](https://arxiv.org/abs/2112.05761v1
 
 ## Contents
 - [Datasets](#datasets)
-- [Train with our datasets](#training)
-- [HyperParameters](#HyperParameters)
-- [Cite](#cite)
+- [Train with datasets](#training)
+- [Pre-trained models](#additional-resources)
+- [Cite](#citing--authors)
 
 
 ## Datasets
 We currently support the following datasets
-* HCP - human connectome project S1200
-  * Register at (https://db.humanconnectome.org/)
-  * Download: WU-Minn HCP Data - 1200 Subjects -> Subjects with 3T MR session data -> Resting State fMRI 1 Preprocessed
+* BNU EOEC1 - Beijing Normal University's Eye Open & Eye Closed fMRI (part 1) dataset
+  * Follow instructions at [BNU link](https://rfmri.org/DownloadRfMRIMaps) and download the dataset
   * Preprocess the data by configuring the folders and run 'data_preprocess_and_load/preprocessing.main()'
-    
-* ucla (Consortium for Neuropsychiatric Phenomics LA5c Study) 
-  * Original version available at (https://openneuro.org/datasets/ds000030/versions/00016)
-  * Data after proprocessing will be added soon, for now can download original and preprocess indiependently.
 
 
 
 ## Training
-* For gender prediction run 'python main.py --dataset_name S1200 --fine_tune_task binary_classification'
-* For age prediction run 'python main.py --dataset_name S1200 --fine_tune_task regression'
-* For schezophrenia prediction run 'python main.py --dataset_name ucla --fine_tune_task binary_classification'
+* For eye status prediction run 'python main.py --dataset_name BNU_EOEC1 --fine_tune_task binary_classification'
+* For age prediction run 'python main.py --dataset_name BNU_EOEC1 --fine_tune_task regression'
 
 ## Tensorboard support
 All metrics are being logged automatically and stored in
 ```
 TFF/runs
 ```
-Run `tesnroboard --logdir=<path>` to see the the logs.
+Run `tensorboard --logdir=<path>` to see the the logs.
 
-## HyperParameters
-In the future will be added the exact hyperparameters to reproduce results from the paper.
+## Additional resources
+
+Pre-trained models of phase 2 and 3 were too large to save them in the repo, so we decided to save them in drive storage. Feel free to download them and place them in <code>experiments</code> folder. Model name containing a word <code>transformer</code> should be saved in <code>BNU_EOEC1_...transformer_..._(numbers)</code> folder and other models follows the same convention.
 
 
 
 ## Citing & Authors
-If you find this repository helpful, feel free to cite our publication -
 
  TFF: Pre-training and Fine-tuning Transformers for fMRI Prediction Tasks
  ```
