@@ -123,26 +123,22 @@ def test(args, model_weights_path):
 def main(base_path):
     args = get_arguments(base_path)
     # pretrain step1
-    # print('starting phase 1...')
-    # model_weights_path_phase1 = run_phase(args, None, '1', 'autoencoder_reconstruction')
-    # print('finishing phase 1...')
-    # # pretrain step2
-    # print('starting phase 2...')
-    # model_weights_path_phase2 = run_phase(args, model_weights_path_phase1, '2', 'tranformer_reconstruction')
-    # print('finishing phase 2...')
-    # # fine tune
-    # print('starting phase 3...')
-    # model_weights_path_phase3 = run_phase(args,
-    #                                       r'C:\Users\Rahma\IdeaProjects\TFF\experiments'
-    #                                       r'\BNU_EOEC1_tranformer_reconstruction_03_12___13_44_35'
-    #                                       r'\BNU_EOEC1_tranformer_reconstruction_03_12___13_44_35_BEST_val_loss.pth',
-    #                                       '3',
-    #                                       'fine_tune_{}'.format(args.fine_tune_task))
+    print('starting phase 1...')
+    model_weights_path_phase1 = run_phase(args, None, '1', 'autoencoder_reconstruction')
+    print('finishing phase 1...')
+    # pretrain step2
+    print('starting phase 2...')
+    model_weights_path_phase2 = run_phase(args, model_weights_path_phase1, '2', 'tranformer_reconstruction')
+    print('finishing phase 2...')
+    # fine tune
+    print('starting phase 3...')
+    model_weights_path_phase3 = run_phase(args,
+                                          model_weights_path_phase2,
+                                          '3',
+                                          'fine_tune_{}'.format(args.fine_tune_task))
     print('finishing phase 3...')
     # test
-    test(args, r'C:\Users\Rahma\IdeaProjects\TFF'
-               r'\experiments\BNU_EOEC1_fine_tune_binary_classification_07_12___04_27_48'
-               r'\BNU_EOEC1_fine_tune_binary_classification_07_12___04_27_48_BEST_val_accuracy.pth')
+    test(args, model_weights_path_phase3)
 
 
 if __name__ == '__main__':
