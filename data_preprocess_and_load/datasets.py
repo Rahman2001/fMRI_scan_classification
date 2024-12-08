@@ -71,8 +71,6 @@ class BNU_EOEC1(BaseDataset):
         self.register_args(**kwargs)
         self.root = r'C:\Users\Rahma\Desktop\Data_Mining_2\project\datasets\Beijing_Normal_University_EOEC1'
         self.meta_data = pd.read_csv(os.path.join(kwargs.get('base_path'), 'data', 'metadata', 'BNU_EOEC1.csv'))
-        # self.meta_data_residual = pd.read_csv(
-        #     os.path.join(kwargs.get('base_path'), 'data', 'metadata', 'HCP_1200_precise_age.csv'))
         self.data_dir = os.path.join(self.root, 'MNI_to_TRs')
         self.subject_names = os.listdir(self.data_dir)
         print(f'subject_names={self.subject_names}')
